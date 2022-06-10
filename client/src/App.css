@@ -1,0 +1,113 @@
+.homepage-card-30-width {
+  width: auto;
+}
+
+@media (min-width: 560px) {
+  .homepage-card-30-width {
+    width: 100px;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f2f2f2;
+  /*  background-color: rgba(223, 227, 250, 0.5); */
+}
+
+.purple-dark {
+  color: #7c5dfa;
+}
+
+.purple-light {
+  color: #9277ff;
+}
+
+.blue-light {
+  color: #dfe3fa;
+}
+
+.blue-dark {
+  color: #7e88c3;
+}
+
+.black {
+  color: #0c0e16;
+}
+
+.header-main {
+  font-size: 16px;
+}
+
+.paragraph-main {
+  font-size: 14px;
+}
+
+.border-radius {
+  border-radius: 12px;
+}
+
+.border-radius-20 {
+  border-radius: 20px;
+}
+
+.button-edit {
+  color: #7e88c3;
+  border: 1px solid transparent;
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.button-edit:hover,
+.button-edit:focus {
+  color: #7e88c3;
+  border: 1px solid transparent;
+  background-color: #dfe3fa;
+}
+
+.button-delete {
+  color: #fff;
+  border: 1px solid transparent;
+  font-weight: bold;
+  background-color: #ec5757;
+}
+.button-delete:hover,
+.button-delete:focus {
+  color: #fff;
+  border: 1px solid transparent !important;
+  background-color: #ff9797;
+}
+
+.button-paid {
+  color: #fff;
+  border: 1px solid transparent;
+  background-color: #7c5dfa;
+  font-weight: bold;
+}
+.button-paid:hover,
+.button-paid:focus {
+  color: #fff;
+  border: 1px solid transparent;
+  background-color: #9277ff;
+}
+
+.button-draft,
+.button-draft:active {
+  color: #7e88c3;
+  border: 1px solid transparent;
+  background-color: #1e2139;
+  font-weight: bold;
+}
+
+.button-draft:hover,
+.button-draft:focus {
+  color: #fff;
+  border: 1px solid transparent;
+  background-color: #1e2139;
+}

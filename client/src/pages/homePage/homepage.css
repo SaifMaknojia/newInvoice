@@ -1,0 +1,17 @@
+.homepage-card {
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.homepage-card:hover {
+  border: 1px solid #7c5dfa;
+}
+
+.width-124 {
+  min-width: 124px;
+}
+
+.background-white{
+  background-color: white;
+}

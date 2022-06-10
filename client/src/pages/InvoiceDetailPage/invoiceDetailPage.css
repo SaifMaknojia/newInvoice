@@ -1,0 +1,37 @@
+@media (min-width: 576px) {
+  .width-50 {
+    width: 50%;
+  }
+}
+
+.primary-light-background {
+  background-color: #f8f8f8;
+}
+
+.primary-dark-background {
+  background-color: #252945;
+}
+
+.button-group {
+  width: 100%;
+  box-shadow: 4px -1px 14px grey;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  padding: 20px 0;
+}
+
+.width-25 {
+  width: 25%;
+}
+
+.width-40 {
+  width: 40%;
+}
+
+.width-20 {
+  width: 20%;
+}
