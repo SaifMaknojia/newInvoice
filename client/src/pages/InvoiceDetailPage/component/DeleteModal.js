@@ -10,7 +10,7 @@ const DeleteModal = () => {
     showDeleteModal,
     singleInvoice,
     allInvoices,
-    setAllInvoices
+    setAllInvoices,
   } = useContext(INVOICE_CONTEXT);
 
   //delete the invoice
@@ -19,7 +19,9 @@ const DeleteModal = () => {
       (newData) => newData._id !== invoiceID
     );
     axios
-      .delete(`http://127.0.0.1:8000/api/v1/invoices/${invoiceID}`)
+      .delete(
+        `https://invoice-app-server.onrender.com/api/v1/invoices/${invoiceID}`
+      )
       .then(() => setAllInvoices(updatedArray));
     //close the modal
     handleModal(showDeleteModal, setShowDeleteModal);

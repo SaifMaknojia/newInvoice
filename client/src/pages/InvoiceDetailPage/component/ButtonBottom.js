@@ -16,7 +16,7 @@ const ButtonBottom = () => {
     update,
     setAllInvoices,
     showOffCanvas,
-    setShowOffCanvas
+    setShowOffCanvas,
   } = useContext(INVOICE_CONTEXT);
 
   const params = useParams();
@@ -25,7 +25,7 @@ const ButtonBottom = () => {
       return update(i, {
         name: invoice.name,
         quantity: invoice.quantity,
-        price: invoice.price
+        price: invoice.price,
       });
     });
     setValue("clientEmail", singleInvoice.clientEmail);
@@ -54,16 +54,19 @@ const ButtonBottom = () => {
     );
     currentInvoice.status = "paid";
     axios
-      .patch(`http://127.0.0.1:8000/api/v1/invoices/${params.id}`, {
-        ...currentInvoice
-      })
+      .patch(
+        `https://invoice-app-server.onrender.com/api/v1/invoices/${params.id}`,
+        {
+          ...currentInvoice,
+        }
+      )
       .then((data) => {
         setAllInvoices(
           allInvoicesCopy.map((invoice) => {
             if (invoice._id === params.id) {
               return {
                 ...invoice,
-                currentInvoice
+                currentInvoice,
               };
             }
             return invoice;

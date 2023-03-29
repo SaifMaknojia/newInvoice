@@ -20,7 +20,7 @@ const FormContainer = () => {
     setAllInvoices,
     setShowOffCanvas,
     singleInvoice,
-    isEditing
+    isEditing,
   } = useContext(INVOICE_CONTEXT);
 
   const params = useParams();
@@ -52,7 +52,7 @@ const FormContainer = () => {
     const val = Math.floor(1000 + Math.random() * 9000);
     obj.invoiceNumber = alphabet + val;
     axios
-      .post("http://127.0.0.1:8000/api/v1/invoices", obj)
+      .post("https://invoice-app-server.onrender.com/api/v1/invoices", obj)
       .then((data) => setAllInvoices([...allInvoices, data.data.invoice]))
       .catch((err) => console.log(err));
   };
@@ -60,14 +60,17 @@ const FormContainer = () => {
   const handlePatchRequest = (obj) => {
     handleSubmitLogic(obj);
     axios
-      .patch(`http://127.0.0.1:8000/api/v1/invoices/${params.id}`, obj)
+      .patch(
+        `https://invoice-app-server.onrender.com/api/v1/invoices/${params.id}`,
+        obj
+      )
       .then((data) => {
         setAllInvoices(
           allInvoices.map((invoice) => {
             if (invoice._id === params.id) {
               return {
                 invoice,
-                obj
+                obj,
               };
             }
             return invoice;
@@ -114,7 +117,7 @@ const FormContainer = () => {
             render={({ field }) => (
               <Form.Select
                 {...register("paymentTerms", {
-                  required: "Select Payment Terms"
+                  required: "Select Payment Terms",
                 })}
                 className={errors.paymentTerms ? "border-red" : ""}
               >

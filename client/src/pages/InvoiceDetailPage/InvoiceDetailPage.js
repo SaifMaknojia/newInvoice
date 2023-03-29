@@ -18,7 +18,9 @@ const InvoiceDetailPage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/api/v1/invoices/${params.id}`)
+      .get(
+        `https://invoice-app-server.onrender.com/api/v1/invoices/${params.id}`
+      )
       .then((invoice) => setSingleInvoice(invoice.data.invoice))
       .catch((err) => console.log(err));
   }, [setSingleInvoice, params.id, allInvoices]);

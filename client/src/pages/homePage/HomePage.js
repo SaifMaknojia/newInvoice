@@ -12,7 +12,7 @@ const HomePage = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/v1/invoices")
+      .get("https://invoice-app-server.onrender.com/api/v1/invoices")
       .then((data) => setAllInvoices(data.data.invoices))
       .catch((err) => console.log(err));
   }, [setAllInvoices]);
